@@ -16,14 +16,26 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var buttonAnswerD: UIButton!
     
     private var haveWon = false
+    var question: Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("View did load")
-        [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD].forEach { (button) in
+        var buttons = [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD]
+        // Configuration of the buttons
+        buttons.forEach { (button) in
             button?.layer.cornerRadius = 20
         }
+        
+        questionLabel.text = question?.question
+        buttons.shuffle()
+        let correctButton = buttons.removeFirst()
+        correctButton?.setTitle(question?.correctAnswer, for: .normal)
+        
+        question?.incorrectAnswers.forEach({ (answer) in
+            let button = buttons.removeFirst()
+            button?.setTitle(answer, for: .normal)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,23 +63,34 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func buttonAnswerAHandler(_ sender: Any) {
-        print("Fish")
-        showWrongAnswerAlert(button: buttonAnswerA)
+        if buttonAnswerA.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerA)
+        } else {
+            showWrongAnswerAlert(button: buttonAnswerA)
+        }
     }
     
     @IBAction func buttonAnswerBHandler(_ sender: Any) {
-        print("Meat")
-        showWrongAnswerAlert(button: buttonAnswerB)
-    }
+        if buttonAnswerB.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerB)
+        } else {
+            showWrongAnswerAlert(button: buttonAnswerB)
+        }    }
     
     @IBAction func buttonAnswerCHandler(_ sender: Any) {
-        print("Rice")
-        showWrongAnswerAlert(button: buttonAnswerC)
+        if buttonAnswerC.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerC)
+        } else {
+            showWrongAnswerAlert(button: buttonAnswerC)
+        }
     }
     
     @IBAction func buttonAnswerDHandler(_ sender: Any) {
-        print("Pizza")
-        showRightAnswerAlert(button: buttonAnswerD)
+        if buttonAnswerD.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerD)
+        } else {
+            showWrongAnswerAlert(button: buttonAnswerD)
+        }
     }
     
     private func showRightAnswerAlert(button: UIButton) {
@@ -84,7 +107,6 @@ class QuestionViewController: UIViewController {
     private func showWrongAnswerAlert(button: UIButton) {
         haveWon = false
         button.backgroundColor = .red
-        buttonAnswerD.backgroundColor = .green
         let alertController = UIAlertController(title: "WRONG 🙈", message: "Maybe next time...", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "Oh no...", style: UIAlertAction.Style.default, handler: { (_) in
             self.performSegue(withIdentifier: "ResultView", sender: nil)

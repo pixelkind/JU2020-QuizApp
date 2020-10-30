@@ -28,7 +28,7 @@
         <!--JU Quiz-->
         <scene sceneID="BMR-2I-i0b">
             <objects>
-                <viewController id="sN4-lp-i3k" sceneMemberID="viewController">
+                <viewController id="sN4-lp-i3k" customClass="StartViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNl-Oe-NuE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -18,6 +18,8 @@
 		6C21C5B92542DB5600229AAF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C21C5B82542DB5600229AAF /* QuestionViewController.swift */; };
 		6C51E032254C10A9007C873B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E031254C10A9007C873B /* ResultViewController.swift */; };
 		6C51E037254C1169007C873B /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E036254C1169007C873B /* ResultView.swift */; };
+		6C51E050254C1D7A007C873B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E04F254C1D7A007C873B /* Question.swift */; };
+		6C51E055254C1FDB007C873B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E054254C1FDB007C873B /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		6C21C5B82542DB5600229AAF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		6C51E031254C10A9007C873B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		6C51E036254C1169007C873B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		6C51E04F254C1D7A007C873B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6C51E054254C1FDB007C873B /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				6C21C5B82542DB5600229AAF /* QuestionViewController.swift */,
 				6C51E031254C10A9007C873B /* ResultViewController.swift */,
 				6C51E036254C1169007C873B /* ResultView.swift */,
+				6C51E04F254C1D7A007C873B /* Question.swift */,
+				6C51E054254C1FDB007C873B /* StartViewController.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -268,10 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C51E032254C10A9007C873B /* ResultViewController.swift in Sources */,
+				6C51E055254C1FDB007C873B /* StartViewController.swift in Sources */,
 				6C21C57A2542C7DB00229AAF /* AppDelegate.swift in Sources */,
 				6C21C57C2542C7DB00229AAF /* SceneDelegate.swift in Sources */,
 				6C21C5B92542DB5600229AAF /* QuestionViewController.swift in Sources */,
 				6C21C5842542C7DB00229AAF /* JU_Quiz.xcdatamodeld in Sources */,
+				6C51E050254C1D7A007C873B /* Question.swift in Sources */,
 				6C51E037254C1169007C873B /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
