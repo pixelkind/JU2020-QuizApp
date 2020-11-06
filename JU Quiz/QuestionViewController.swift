@@ -16,10 +16,23 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var buttonAnswerD: UIButton!
     
     private var haveWon = false
+    var questions: [Question] = [] {
+        didSet {
+            question = questions.removeFirst()
+        }
+    }
     var question: Question?
+    var numberOfQuestions = 0
+    var rightAnswers = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.hidesBackButton = true
+        
+        // Configure of the question label
+        questionLabel.clipsToBounds = true
+        questionLabel.layer.cornerRadius = 20
         
         var buttons = [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD]
         // Configuration of the buttons
@@ -95,11 +108,11 @@ class QuestionViewController: UIViewController {
     
     private func showRightAnswerAlert(button: UIButton) {
         haveWon = true
+        rightAnswers += 1
         button.backgroundColor = .green
         let alertController = UIAlertController(title: "You're right 🥳", message: "Go on...", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Yes!", style: UIAlertAction.Style.default, handler: { (_) in
-            self.performSegue(withIdentifier: "ResultView", sender: nil)
-//            alertController.dismiss(animated: true, completion: nil)
+        alertController.addAction(UIAlertAction(title: "Yes!", style: UIAlertAction.Style.default, handler: { [weak self] (_) in
+            self?.goToNextScreen()
         }))
         present(alertController, animated: true, completion: nil)
     }
@@ -108,12 +121,23 @@ class QuestionViewController: UIViewController {
         haveWon = false
         button.backgroundColor = .red
         let alertController = UIAlertController(title: "WRONG 🙈", message: "Maybe next time...", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Oh no...", style: UIAlertAction.Style.default, handler: { (_) in
-            self.performSegue(withIdentifier: "ResultView", sender: nil)
-//            self.navigationController?.popViewController(animated: true)
-//            alertController.dismiss(animated: true, completion: nil)
+        alertController.addAction(UIAlertAction(title: "Oh no...", style: UIAlertAction.Style.default, handler: { [weak self] (_) in
+            self?.goToNextScreen()
         }))
         present(alertController, animated: true, completion: nil)
+    }
+    
+    private func goToNextScreen() {
+        guard questions.isEmpty == false,
+              let questionViewController = storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController else {
+            performSegue(withIdentifier: "ResultView", sender: nil)
+            return
+        }
+        
+        questionViewController.numberOfQuestions = numberOfQuestions
+        questionViewController.rightAnswers = rightAnswers
+        questionViewController.questions = questions
+        navigationController?.pushViewController(questionViewController, animated: true)
     }
     
     // MARK: - Navigation
@@ -121,7 +145,7 @@ class QuestionViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController = segue.destination as? ResultViewController {
-            resultViewController.resultView.resultLabel.text = haveWon ? "🥳" : "😩"
+            resultViewController.resultView.resultLabel.text = "🥳 You answered \(rightAnswers) right from \(numberOfQuestions) questions."
         }
     }
 
