@@ -49,6 +49,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="JU Quiz" id="XuM-pd-ehV"/>
+                    <connections>
+                        <outlet property="startButton" destination="Uxo-JM-Bxl" id="DlF-Gg-1lk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eO-K5-8hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
