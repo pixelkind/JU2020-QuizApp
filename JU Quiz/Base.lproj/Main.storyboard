@@ -40,10 +40,19 @@
                                     <segue destination="bRa-qz-Blv" kind="show" id="YAT-6C-t4o"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iN-8M-rgK">
+                                <rect key="frame" x="152.66666666666666" y="441" width="70" height="30"/>
+                                <state key="normal" title="Highscore"/>
+                                <connections>
+                                    <action selector="highscoreButtonHandler:" destination="sN4-lp-i3k" eventType="touchUpInside" id="Ygs-0W-y89"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pvo-O7-Ne6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9iN-8M-rgK" firstAttribute="top" secondItem="Uxo-JM-Bxl" secondAttribute="bottom" constant="20" id="90z-t9-H9R"/>
+                            <constraint firstItem="9iN-8M-rgK" firstAttribute="centerX" secondItem="Uxo-JM-Bxl" secondAttribute="centerX" id="Ih5-aB-SXH"/>
                             <constraint firstItem="Uxo-JM-Bxl" firstAttribute="centerX" secondItem="tNl-Oe-NuE" secondAttribute="centerX" id="dpq-Hz-fZn"/>
                             <constraint firstItem="Uxo-JM-Bxl" firstAttribute="centerY" secondItem="tNl-Oe-NuE" secondAttribute="centerY" id="lBX-Ca-fcE"/>
                         </constraints>
