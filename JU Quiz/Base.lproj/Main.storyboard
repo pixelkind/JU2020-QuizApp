@@ -57,7 +57,7 @@
         <!--Question View Controller-->
         <scene sceneID="IcC-42-8pk">
             <objects>
-                <viewController id="bRa-qz-Blv" customClass="QuestionViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="bRa-qz-Blv" customClass="QuestionViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z02-rz-sPZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
