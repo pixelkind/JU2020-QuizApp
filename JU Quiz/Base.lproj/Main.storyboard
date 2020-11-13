@@ -54,20 +54,30 @@
                                     <action selector="exampleButtonHandler:" destination="sN4-lp-i3k" eventType="touchUpInside" id="FZ1-7b-K4J"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnQ-ti-wYq">
+                                <rect key="frame" x="20" y="128" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pvo-O7-Ne6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9iN-8M-rgK" firstAttribute="top" secondItem="Uxo-JM-Bxl" secondAttribute="bottom" constant="20" id="90z-t9-H9R"/>
+                            <constraint firstItem="OnQ-ti-wYq" firstAttribute="top" secondItem="Pvo-O7-Ne6" secondAttribute="top" constant="40" id="ANS-dG-puj"/>
+                            <constraint firstItem="OnQ-ti-wYq" firstAttribute="leading" secondItem="Pvo-O7-Ne6" secondAttribute="leading" constant="20" id="EE3-OK-hMC"/>
                             <constraint firstItem="9iN-8M-rgK" firstAttribute="centerX" secondItem="Uxo-JM-Bxl" secondAttribute="centerX" id="Ih5-aB-SXH"/>
+                            <constraint firstItem="OnQ-ti-wYq" firstAttribute="centerX" secondItem="tNl-Oe-NuE" secondAttribute="centerX" id="Mm9-Mc-hg7"/>
                             <constraint firstItem="Q12-YK-U3b" firstAttribute="top" secondItem="9iN-8M-rgK" secondAttribute="bottom" constant="20" id="P5j-pU-hrQ"/>
                             <constraint firstItem="Uxo-JM-Bxl" firstAttribute="centerX" secondItem="tNl-Oe-NuE" secondAttribute="centerX" id="dpq-Hz-fZn"/>
                             <constraint firstItem="Uxo-JM-Bxl" firstAttribute="centerY" secondItem="tNl-Oe-NuE" secondAttribute="centerY" id="lBX-Ca-fcE"/>
                             <constraint firstItem="Q12-YK-U3b" firstAttribute="centerX" secondItem="9iN-8M-rgK" secondAttribute="centerX" id="uB5-Ud-eKe"/>
+                            <constraint firstItem="Pvo-O7-Ne6" firstAttribute="trailing" secondItem="OnQ-ti-wYq" secondAttribute="trailing" constant="20" id="ydH-NA-OHP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="JU Quiz" id="XuM-pd-ehV"/>
                     <connections>
+                        <outlet property="nameTextField" destination="OnQ-ti-wYq" id="9dg-sC-Iq9"/>
                         <outlet property="startButton" destination="Uxo-JM-Bxl" id="DlF-Gg-1lk"/>
                     </connections>
                 </viewController>

@@ -28,6 +28,7 @@
 		6C54B1B4255E74DD005D3DE5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1B3255E74DD005D3DE5 /* DatabaseManager.swift */; };
 		6C54B1B9255E76A4005D3DE5 /* GameResultDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1B8255E76A4005D3DE5 /* GameResultDatabaseManager.swift */; };
 		6C54B1BE255E7ABC005D3DE5 /* ExampleScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */; };
+		6C54B1C3255E82C6005D3DE5 /* TextScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		6C54B1B3255E74DD005D3DE5 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		6C54B1B8255E76A4005D3DE5 /* GameResultDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultDatabaseManager.swift; sourceTree = "<group>"; };
 		6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleScrollViewController.swift; sourceTree = "<group>"; };
+		6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				6C14319D255560DF00C40556 /* HighscoreTableViewController.swift */,
 				6C54B1AE255E6E4C005D3DE5 /* String+HtmlDecoding.swift */,
 				6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */,
+				6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				6C21C57A2542C7DB00229AAF /* AppDelegate.swift in Sources */,
 				6C21C57C2542C7DB00229AAF /* SceneDelegate.swift in Sources */,
 				6C21C5B92542DB5600229AAF /* QuestionViewController.swift in Sources */,
+				6C54B1C3255E82C6005D3DE5 /* TextScrollViewController.swift in Sources */,
 				6C54B1B4255E74DD005D3DE5 /* DatabaseManager.swift in Sources */,
 				6C21C5842542C7DB00229AAF /* JU_Quiz.xcdatamodeld in Sources */,
 				6C54B1AF255E6E4C005D3DE5 /* String+HtmlDecoding.swift in Sources */,

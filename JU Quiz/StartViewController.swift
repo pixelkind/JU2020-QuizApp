@@ -9,6 +9,7 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     var questions: [Question] = []
     
@@ -17,6 +18,14 @@ class StartViewController: UIViewController {
 
         startButton.isEnabled = false
         downloadQuestions(amount: 5)
+        
+        nameTextField.placeholder = "Your Name"
+        nameTextField.delegate = self
+        nameTextField.returnKeyType = .done
+        
+        if let name = UserDefaults.standard.string(forKey: "username") {
+            nameTextField.text = name
+        }
     }
     
     @IBAction func highscoreButtonHandler(_ sender: Any) {
@@ -60,8 +69,29 @@ class StartViewController: UIViewController {
         }
     }
     @IBAction func exampleButtonHandler(_ sender: Any) {
-        let scrollViewController = ExampleScrollViewController()
-        navigationController?.pushViewController(scrollViewController, animated: true)
+//        let scrollViewController = ExampleScrollViewController()
+//        navigationController?.pushViewController(scrollViewController, animated: true)
+        
+//        let textScrollViewController = TextScrollViewController()
+//        navigationController?.pushViewController(textScrollViewController, animated: true)
+    }
+    
+}
+
+// MARK: - Text field delegate
+
+extension StartViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let name = textField.text else {
+            return
+        }
+        UserDefaults.standard.set(name, forKey: "username")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
