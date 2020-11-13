@@ -29,6 +29,7 @@
 		6C54B1B9255E76A4005D3DE5 /* GameResultDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1B8255E76A4005D3DE5 /* GameResultDatabaseManager.swift */; };
 		6C54B1BE255E7ABC005D3DE5 /* ExampleScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */; };
 		6C54B1C3255E82C6005D3DE5 /* TextScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */; };
+		6C54B1D3255E88BE005D3DE5 /* HtmlDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1D2255E88BE005D3DE5 /* HtmlDecoderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		6C54B1B8255E76A4005D3DE5 /* GameResultDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultDatabaseManager.swift; sourceTree = "<group>"; };
 		6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleScrollViewController.swift; sourceTree = "<group>"; };
 		6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextScrollViewController.swift; sourceTree = "<group>"; };
+		6C54B1D2255E88BE005D3DE5 /* HtmlDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlDecoderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				6C21C5932542C7DE00229AAF /* JU_QuizTests.swift */,
+				6C54B1D2255E88BE005D3DE5 /* HtmlDecoderTests.swift */,
 				6C21C5952542C7DE00229AAF /* Info.plist */,
 			);
 			path = "JU QuizTests";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C21C5942542C7DE00229AAF /* JU_QuizTests.swift in Sources */,
+				6C54B1D3255E88BE005D3DE5 /* HtmlDecoderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

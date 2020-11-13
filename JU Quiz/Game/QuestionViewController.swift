@@ -77,7 +77,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func buttonAnswerAHandler(_ sender: Any) {
-        if buttonAnswerA.title(for: .normal) == question?.correctAnswer {
+        if checkIfItIsTheRightAnswer(forButton: buttonAnswerA) {
             showRightAnswerAlert(button: buttonAnswerA)
         } else {
             showWrongAnswerAlert(button: buttonAnswerA)
@@ -85,14 +85,14 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func buttonAnswerBHandler(_ sender: Any) {
-        if buttonAnswerB.title(for: .normal) == question?.correctAnswer {
+        if checkIfItIsTheRightAnswer(forButton: buttonAnswerB) {
             showRightAnswerAlert(button: buttonAnswerB)
         } else {
             showWrongAnswerAlert(button: buttonAnswerB)
         }    }
     
     @IBAction func buttonAnswerCHandler(_ sender: Any) {
-        if buttonAnswerC.title(for: .normal) == question?.correctAnswer {
+        if checkIfItIsTheRightAnswer(forButton: buttonAnswerC) {
             showRightAnswerAlert(button: buttonAnswerC)
         } else {
             showWrongAnswerAlert(button: buttonAnswerC)
@@ -100,11 +100,15 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func buttonAnswerDHandler(_ sender: Any) {
-        if buttonAnswerD.title(for: .normal) == question?.correctAnswer {
+        if checkIfItIsTheRightAnswer(forButton: buttonAnswerD) {
             showRightAnswerAlert(button: buttonAnswerD)
         } else {
             showWrongAnswerAlert(button: buttonAnswerD)
         }
+    }
+    
+    func checkIfItIsTheRightAnswer(forButton button: UIButton) -> Bool {
+        button.title(for: .normal) == question?.correctAnswer
     }
     
     private func showRightAnswerAlert(button: UIButton) {
