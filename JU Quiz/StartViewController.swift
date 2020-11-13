@@ -59,5 +59,9 @@ class StartViewController: UIViewController {
             questionViewController.questions = questions
         }
     }
-
+    @IBAction func exampleButtonHandler(_ sender: Any) {
+        let scrollViewController = ExampleScrollViewController()
+        navigationController?.pushViewController(scrollViewController, animated: true)
+    }
+    
 }
