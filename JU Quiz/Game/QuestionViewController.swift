@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class QuestionViewController: UIViewController {
 
@@ -16,6 +15,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var buttonAnswerC: UIButton!
     @IBOutlet weak var buttonAnswerD: UIButton!
     
+    private let gameResultDatabaseManager = GameResultDatabaseManager()
     private var haveWon = false
     var questions: [Question] = [] {
         didSet {
@@ -145,14 +145,8 @@ class QuestionViewController: UIViewController {
     // MARK: - Saving the result
     
     private func saveGameResult() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedObjectContext = appDelegate.persistentContainer.viewContext
-        
-        if let gameResult = NSEntityDescription.insertNewObject(forEntityName: "GameResult", into: managedObjectContext) as? GameResult {
-            gameResult.numberOfQuestions = Int32(numberOfQuestions)
-            gameResult.rightAnswers = Int32(rightAnswers)
-            gameResult.date = Date()
-            appDelegate.saveContext()
+        if gameResultDatabaseManager.create(withNumbersOfQuestions: numberOfQuestions, andRightAnswers: rightAnswers) != nil {
+            gameResultDatabaseManager.save()
         }
     }
     
