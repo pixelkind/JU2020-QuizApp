@@ -30,6 +30,7 @@
 		6C54B1BE255E7ABC005D3DE5 /* ExampleScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */; };
 		6C54B1C3255E82C6005D3DE5 /* TextScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */; };
 		6C54B1D3255E88BE005D3DE5 /* HtmlDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1D2255E88BE005D3DE5 /* HtmlDecoderTests.swift */; };
+		6C54B1DB255E9459005D3DE5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B1DA255E9459005D3DE5 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleScrollViewController.swift; sourceTree = "<group>"; };
 		6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextScrollViewController.swift; sourceTree = "<group>"; };
 		6C54B1D2255E88BE005D3DE5 /* HtmlDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlDecoderTests.swift; sourceTree = "<group>"; };
+		6C54B1DA255E9459005D3DE5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				6C54B1AE255E6E4C005D3DE5 /* String+HtmlDecoding.swift */,
 				6C54B1BD255E7ABC005D3DE5 /* ExampleScrollViewController.swift */,
 				6C54B1C2255E82C6005D3DE5 /* TextScrollViewController.swift */,
+				6C54B1DA255E9459005D3DE5 /* CameraViewController.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				6C51E050254C1D7A007C873B /* Question.swift in Sources */,
 				6C51E037254C1169007C873B /* ResultView.swift in Sources */,
 				6C14319925555C7400C40556 /* GameResult+CoreDataProperties.swift in Sources */,
+				6C54B1DB255E9459005D3DE5 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
