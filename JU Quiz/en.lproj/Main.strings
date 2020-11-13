@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Highscore"; ObjectID = "9iN-8M-rgK"; */
+"9iN-8M-rgK.normalTitle" = "Highscore";
+
+/* Class = "UIButton"; normalTitle = "🍚"; ObjectID = "Mpl-85-htF"; */
+"Mpl-85-htF.normalTitle" = "🍚";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "Uxo-JM-Bxl"; */
+"Uxo-JM-Bxl.normalTitle" = "Start";
+
+/* Class = "UINavigationItem"; title = "JU Quiz"; ObjectID = "XuM-pd-ehV"; */
+"XuM-pd-ehV.title" = "JU Quiz";
+
+/* Class = "UIButton"; normalTitle = "🍕"; ObjectID = "bWH-9M-hLE"; */
+"bWH-9M-hLE.normalTitle" = "🍕";
+
+/* Class = "UIButton"; normalTitle = "🥩"; ObjectID = "fqT-Ro-HaX"; */
+"fqT-Ro-HaX.normalTitle" = "🥩";
+
+/* Class = "UILabel"; text = "What is your favorit food?"; ObjectID = "pkJ-n1-aLl"; */
+"pkJ-n1-aLl.text" = "What is your favorit food?";
+
+/* Class = "UIButton"; normalTitle = "🐟"; ObjectID = "vdp-Ml-hSu"; */
+"vdp-Ml-hSu.normalTitle" = "🐟";
