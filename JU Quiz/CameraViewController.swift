@@ -29,9 +29,8 @@ class CameraViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
-        imageView.bottomAnchor.constraint(lessThanOrEqualTo: cameraButton.topAnchor, constant: -40).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: cameraButton.topAnchor, constant: 40).isActive = true
         
-//        cameraButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40).isActive = true
         cameraButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         cameraButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
