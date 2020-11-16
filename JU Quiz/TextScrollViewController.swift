@@ -26,8 +26,8 @@ class TextScrollViewController: UIViewController {
         label.isUserInteractionEnabled = true
         scrollView.addSubview(label)
         
-        label.topAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.topAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.bottomAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         label.leadingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.trailingAnchor).isActive = true
     }
