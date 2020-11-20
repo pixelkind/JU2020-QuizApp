@@ -17,7 +17,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
 
         startButton.isEnabled = false
-        downloadQuestions(amount: 1)
+        downloadQuestions(amount: 5)
         
         nameTextField.placeholder = "Your Name"
         nameTextField.delegate = self
