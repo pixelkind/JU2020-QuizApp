@@ -27,7 +27,12 @@ class ResultViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        resultView.startAnimation()
+    }
+    
     /*
     // MARK: - Navigation
 

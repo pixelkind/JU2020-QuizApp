@@ -12,6 +12,10 @@ class ResultView: UIView {
     private let titleLabel = UILabel()
     let resultLabel = UILabel()
     let button = UIButton()
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "Logo"))
+    var imageViewCenterXAnchor: NSLayoutConstraint?
+    var imageViewLeadingAnchor: NSLayoutConstraint?
+    var imageViewTrailingAnchor: NSLayoutConstraint?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,12 +48,16 @@ class ResultView: UIView {
         resultLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
         
         // Showing the logo
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "Logo"))
         addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 20).isActive = true
-        imageView.centerXAnchor.constraint(equalTo: resultLabel.centerXAnchor).isActive = true
+//        imageViewCenterXAnchor = imageView.centerXAnchor.constraint(equalTo: resultLabel.centerXAnchor)
+//        imageViewCenterXAnchor?.constant = -150
+//        imageViewCenterXAnchor?.isActive = true
+        imageViewLeadingAnchor = imageView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor)
+        imageViewLeadingAnchor?.isActive = true
+        imageViewTrailingAnchor = imageView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor)
         
         button.setTitleColor(.systemBlue, for: .normal)
         button.setTitle(NSLocalizedString("Back to start", comment: "Result button title"), for: .normal)
@@ -58,6 +66,15 @@ class ResultView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         button.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    }
+    
+    func startAnimation() {
+        UIView.animate(withDuration: 2, delay: 0, options: [.curveEaseInOut, .autoreverse, .repeat]) {
+            self.imageViewLeadingAnchor?.isActive = false
+            self.imageViewTrailingAnchor?.isActive = true
+//            self.imageViewCenterXAnchor?.constant = 150
+            self.layoutIfNeeded()
+        }
     }
 
 }
