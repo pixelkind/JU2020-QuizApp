@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Nimble
 
 class JU_QuizUITests: XCTestCase {
 
@@ -42,6 +43,7 @@ class JU_QuizUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
+        expect(app.buttons["Start"].isEnabled).toEventually(beTrue(), timeout: .seconds(10))
         app.buttons["Start"].tap()
         
         var rightAnswers = 0
